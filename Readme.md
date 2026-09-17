@@ -16,7 +16,7 @@ The repository contains:
 
 ## Method at a glance
 
-1. Encode each 5â€“50-residue peptide using 520 AAC, DPC, type-I PseAAC, and CKSAAGP descriptors.
+1. Encode each 5–50-residue peptide using 520 AAC, DPC, type-I PseAAC, and CKSAAGP descriptors.
 2. Fit standardization and PCA using training data only.
 3. Retain 160 principal components and L2-normalize every embedding.
 4. Use all training peptides as labeled dictionary atoms.
@@ -27,17 +27,17 @@ An outer five-fold training partition contains 377 or 378 atoms in 160 dimension
 
 ## Main results
 
-Values are mean Â± sample standard deviation across five partition seeds, each using stratified five-fold cross-validation.
+Values are mean ± sample standard deviation across five partition seeds, each using stratified five-fold cross-validation.
 
 | Analysis | Model | Accuracy | MCC | F1 | ROC AUC |
 |---|---|---:|---:|---:|---:|
-| Direct protocol | **PCA160-SRC** | **0.791 Â± 0.009** | **0.582 Â± 0.017** | 0.795 Â± 0.008 | **0.881 Â± 0.007** |
-| Direct protocol | RBF-SVM | 0.775 Â± 0.008 | 0.550 Â± 0.017 | 0.773 Â± 0.009 | 0.844 Â± 0.003 |
-| Direct protocol | AntiDMPpred-RF reimplementation | 0.730 Â± 0.012 | 0.461 Â± 0.024 | 0.739 Â± 0.013 | 0.806 Â± 0.005 |
-| Common-width SRC variants | AWMKPCA160-L1-SRC | 0.784 Â± 0.013 | 0.572 Â± 0.027 | **0.796 Â± 0.014** | 0.864 Â± 0.010 |
-| Common-width SRC variants | CKSAAP-KPCA160-L1-SRC | 0.784 Â± 0.005 | 0.570 Â± 0.010 | 0.779 Â± 0.005 | 0.881 Â± 0.006 |
-| CD-HIT50 robustness | **PCA160-SRC** | **0.714 Â± 0.016** | **0.429 Â± 0.031** | **0.716 Â± 0.016** | **0.791 Â± 0.012** |
-| CD-HIT50 robustness | AntiDMPpred-RF reimplementation | 0.682 Â± 0.011 | 0.364 Â± 0.022 | 0.691 Â± 0.010 | 0.765 Â± 0.006 |
+| Direct protocol | **PCA160-SRC** | **0.791 ± 0.009** | **0.582 ± 0.017** | 0.795 ± 0.008 | **0.881 ± 0.007** |
+| Direct protocol | RBF-SVM | 0.775 ± 0.008 | 0.550 ± 0.017 | 0.773 ± 0.009 | 0.844 ± 0.003 |
+| Direct protocol | AntiDMPpred-RF reimplementation | 0.730 ± 0.012 | 0.461 ± 0.024 | 0.739 ± 0.013 | 0.806 ± 0.005 |
+| Common-width SRC variants | AWMKPCA160-L1-SRC | 0.784 ± 0.013 | 0.572 ± 0.027 | **0.796 ± 0.014** | 0.864 ± 0.010 |
+| Common-width SRC variants | CKSAAP-KPCA160-L1-SRC | 0.784 ± 0.005 | 0.570 ± 0.010 | 0.779 ± 0.005 | 0.881 ± 0.006 |
+| CD-HIT50 robustness | **PCA160-SRC** | **0.714 ± 0.016** | **0.429 ± 0.031** | **0.716 ± 0.016** | **0.791 ± 0.012** |
+| CD-HIT50 robustness | AntiDMPpred-RF reimplementation | 0.682 ± 0.011 | 0.364 ± 0.022 | 0.691 ± 0.010 | 0.765 ± 0.006 |
 
 AntiDMPpred values are regenerated, same-fold results from this codebase; they are not copied from the published paper.
 
@@ -100,7 +100,7 @@ The audit checks the dataset SHA-256 hash, expected repeated-CV outputs, model-s
 
 ## Predict new peptides
 
-Prepare a FASTA containing canonical amino acids and sequences 5â€“50 residues long:
+Prepare a FASTA containing canonical amino acids and sequences 5–50 residues long:
 
 ```text
 >candidate_1
@@ -131,7 +131,7 @@ bash scripts/run_revised_classical_study.sh
 This regenerates:
 
 - the direct repeated five-by-five conventional comparison;
-- the 16â€“240 component PCA-SRC ablation;
+- the 16–240 component PCA-SRC ablation;
 - the PCA160-SRC CD-HIT50 grouped robustness analysis.
 
 ### 2. Common-width representation study
@@ -166,7 +166,7 @@ The LaTeX build requires `pdflatex`, `bibtex`, and `pdfinfo`. The resulting PDF 
 - **Primary protocol:** `StratifiedKFold(n_splits=5, shuffle=True)` repeated with seeds 6, 17, 29, 41, and 53.
 - **Robustness protocol:** CD-HIT50 groups with repeated `StratifiedGroupKFold` using the same seeds.
 - **Nested fitting:** scaling, PCA/representation learning, sparse-penalty selection, and dictionary construction are restricted to training data.
-- **Summary:** metrics are first calculated from the complete out-of-fold prediction vector for each seed and then reported as mean Â± sample standard deviation over five seeds.
+- **Summary:** metrics are first calculated from the complete out-of-fold prediction vector for each seed and then reported as mean ± sample standard deviation over five seeds.
 - **No SMOTE:** the historical benchmark is exactly balanced (236/236).
 
 ## PCA-dimension selection
