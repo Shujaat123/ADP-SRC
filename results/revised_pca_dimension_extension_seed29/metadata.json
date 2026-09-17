@@ -1,0 +1,18 @@
+{
+  "protocol": "Repeated StratifiedKFold",
+  "outer_folds": 5,
+  "inner_folds_for_alpha": 3,
+  "seeds": [
+    29
+  ],
+  "dimensions": [
+    96,
+    160,
+    192,
+    224,
+    240
+  ],
+  "original_dimension": 520,
+  "dictionary_atoms_are_outer_training_peptides": true,
+  "outer_test_used_for_selection": false
+}

@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adp-src-deeplse"
+version = "3.2.1"
+description = "PCA160 sparse representation classification study on AntiDMPpred"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "scipy>=1.10",
+  "scikit-learn>=1.3",
+  "matplotlib>=3.7",
+  "joblib>=1.3",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.4"]
+neural = ["torch>=2.2"]
+
+[project.scripts]
+adp-lse-benchmark = "adp_src.lse_evaluation:main"
+adp-stability-benchmark = "adp_src.stability_evaluation:main"
+adp-kernel-benchmark = "adp_src.kernel_evaluation:main"
+adp-kernel-stability = "adp_src.kernel_stability_evaluation:main"
+
+[tool.setuptools]
+packages = ["adp_src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-markers"

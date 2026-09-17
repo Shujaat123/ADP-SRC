@@ -1,0 +1,46 @@
+{
+  "model": "PCA160-SRC",
+  "dictionary_atoms": 472,
+  "dictionary_dimension": 160,
+  "dictionary_shape": [
+    472,
+    160
+  ],
+  "overcomplete": true,
+  "class_atoms": {
+    "negative": 236,
+    "positive": 236
+  },
+  "alpha": 0.001,
+  "alpha_selection": "5-fold StratifiedKFold on the complete development set",
+  "alpha_candidates": [
+    0.001,
+    0.005,
+    0.01,
+    0.02
+  ],
+  "seed": 6,
+  "performance_warning": "The serialized dictionary is fitted on all 472 samples for future inference. Paper performance must come only from saved outer-fold OOF predictions.",
+  "inner_scores": [
+    {
+      "mode": "pca160",
+      "alpha": 0.001,
+      "mcc": 0.5891152823823907
+    },
+    {
+      "mode": "pca160",
+      "alpha": 0.005,
+      "mcc": 0.5849348342598332
+    },
+    {
+      "mode": "pca160",
+      "alpha": 0.01,
+      "mcc": 0.580638803499191
+    },
+    {
+      "mode": "pca160",
+      "alpha": 0.02,
+      "mcc": 0.5849348342598332
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "dataset_sha256": "9371de76e93319d8f12cf6ec6ce1ad3b565476cf2cd1cfdcef4422574b132edb",
+  "primary_protocol": "Repeated StratifiedKFold: 5 folds x seeds [6, 17, 29, 41, 53]",
+  "secondary_protocol": "CD-HIT50 groups + repeated StratifiedGroupKFold on the same five seeds",
+  "selected_model": "PCA160-SRC",
+  "dimension_selection": {
+    "status": "exploratory stability-aware operating-point selection",
+    "tested_dimensions": [16, 32, 64, 96, 128, 160, 192, 224, 240],
+    "f1_plateau_tolerance": 0.005,
+    "rule": "within 0.005 absolute mean F1 of the maximum, prefer higher MCC and AUC with lower between-seed variability",
+    "literal_f1_maximum_dimension": 240,
+    "selected_dimension": 160
+  },
+  "pca_src": {
+    "input_dimension": 520,
+    "dictionary_atoms": "all outer-training samples",
+    "normalization": "row L2",
+    "alpha_candidates": [0.001, 0.005, 0.01, 0.02],
+    "final_alpha": 0.001,
+    "final_all_data_atoms": 472,
+    "final_overcompleteness_ratio": 2.95
+  },
+  "conventional_comparators": [
+    "AntiDMPpred-RF reimplementation",
+    "RBF-SVM",
+    "Logistic Regression",
+    "Gradient Boosting"
+  ],
+  "representation_variants": [
+    "DeepLSE160-SRC",
+    "AE160-SRC",
+    "CKSAAP-KPCA160-MP",
+    "CKSAAP-KPCA160-L1-SRC",
+    "AWMKPCA160-L1-SRC"
+  ],
+  "representation_comparison_dimension": 160,
+  "smote": false
+}

@@ -1,0 +1,158 @@
+{
+  "model_name": "CKSAAP-KPCA-L1-SRC",
+  "selection_protocol": "3-fold StratifiedGroupKFold using CD-HIT50 groups; MCC then AUC",
+  "selected_dimension": 64,
+  "selected_alpha": 0.001,
+  "dictionary_atoms": 472,
+  "dictionary_dimension": 64,
+  "overcompleteness_ratio": 7.375,
+  "dataset_sha256": "9371de76e93319d8f12cf6ec6ce1ad3b565476cf2cd1cfdcef4422574b132edb",
+  "model_sha256": "d4460a1585406dc03233c5cdcafd1361ba74aa8fdf413274a9e0ec69fdfd4240",
+  "historical_negative_warning": "Class 0 comprises AVPdb-derived historical benchmark controls, not assay-confirmed universal negatives.",
+  "candidates": [
+    {
+      "representation": "CKSAAP",
+      "solver": "MP",
+      "dimension": 16,
+      "solver_value": 5.0,
+      "mcc": 0.18725608395082732,
+      "auc_roc": 0.646617351335823
+    },
+    {
+      "representation": "CKSAAP",
+      "solver": "MP",
+      "dimension": 16,
+      "solver_value": 10.0,
+      "mcc": 0.20427936430999344,
+      "auc_roc": 0.6411950588911233
+    },
+    {
+      "representation": "CKSAAP",
+      "solver": "MP",
+      "dimension": 16,
+      "solver_value": 20.0,
+      "mcc": 0.2041241452319315,
+      "auc_roc": 0.6410334673944269
+    },
+    {
+      "representation": "CKSAAP",
+      "solver": "MP",
+      "dimension": 32,
+      "solver_value": 5.0,
+      "mcc": 0.32676732290427307,
+      "auc_roc": 0.7019534616489516
+    },
+    {
+      "representation": "CKSAAP",
+      "solver": "MP",
+      "dimension": 32,
+      "solver_value": 10.0,
+      "mcc": 0.3397647942917504,
+      "auc_roc": 0.6998168629704109
+    },
+    {
+      "representation": "CKSAAP",
+      "solver": "MP",
+      "dimension": 32,
+      "solver_value": 20.0,
+      "mcc": 0.34825891414904414,
+      "auc_roc": 0.69852413099684
+    },
+    {
+      "representation": "CKSAAP",
+      "solver": "MP",
+      "dimension": 64,
+      "solver_value": 5.0,
+      "mcc": 0.3524074612299062,
+      "auc_roc": 0.7535550129273196
+    },
+    {
+      "representation": "CKSAAP",
+      "solver": "MP",
+      "dimension": 64,
+      "solver_value": 10.0,
+      "mcc": 0.3690451625259511,
+      "auc_roc": 0.7593363975869003
+    },
+    {
+      "representation": "CKSAAP",
+      "solver": "MP",
+      "dimension": 64,
+      "solver_value": 20.0,
+      "mcc": 0.3778826993911042,
+      "auc_roc": 0.7557275208273484
+    },
+    {
+      "representation": "CKSAAP",
+      "solver": "L1",
+      "dimension": 16,
+      "solver_value": 0.001,
+      "mcc": 0.25438348555315904,
+      "auc_roc": 0.6800308819304797
+    },
+    {
+      "representation": "CKSAAP",
+      "solver": "L1",
+      "dimension": 16,
+      "solver_value": 0.005,
+      "mcc": 0.2628629350715977,
+      "auc_roc": 0.6782892846883081
+    },
+    {
+      "representation": "CKSAAP",
+      "solver": "L1",
+      "dimension": 16,
+      "solver_value": 0.01,
+      "mcc": 0.2500202013853991,
+      "auc_roc": 0.6766554151106003
+    },
+    {
+      "representation": "CKSAAP",
+      "solver": "L1",
+      "dimension": 32,
+      "solver_value": 0.001,
+      "mcc": 0.3813559322033898,
+      "auc_roc": 0.732458345303074
+    },
+    {
+      "representation": "CKSAAP",
+      "solver": "L1",
+      "dimension": 32,
+      "solver_value": 0.005,
+      "mcc": 0.3771220296226157,
+      "auc_roc": 0.7310040218328067
+    },
+    {
+      "representation": "CKSAAP",
+      "solver": "L1",
+      "dimension": 32,
+      "solver_value": 0.01,
+      "mcc": 0.3771491173440766,
+      "auc_roc": 0.7306269750071819
+    },
+    {
+      "representation": "CKSAAP",
+      "solver": "L1",
+      "dimension": 64,
+      "solver_value": 0.001,
+      "mcc": 0.39072951343551293,
+      "auc_roc": 0.767020970985349
+    },
+    {
+      "representation": "CKSAAP",
+      "solver": "L1",
+      "dimension": 64,
+      "solver_value": 0.005,
+      "mcc": 0.39072951343551293,
+      "auc_roc": 0.766608014938236
+    },
+    {
+      "representation": "CKSAAP",
+      "solver": "L1",
+      "dimension": 64,
+      "solver_value": 0.01,
+      "mcc": 0.3865975294223258,
+      "auc_roc": 0.7662309681126113
+    }
+  ]
+}

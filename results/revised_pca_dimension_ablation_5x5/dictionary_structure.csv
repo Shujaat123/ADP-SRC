@@ -1,0 +1,6 @@
+representation,dimension,mean_dictionary_atoms,overcompleteness_ratio
+Original descriptors,520,377.6,0.7261538461538461
+PCA16,16,377.6,23.6
+PCA32,32,377.6,11.8
+PCA64,64,377.6,5.9
+PCA128,128,377.6,2.95

@@ -1,0 +1,42 @@
+{
+  "protocol": "Repeated StratifiedKFold",
+  "outer_folds": 5,
+  "seeds": [
+    6,
+    17,
+    29,
+    41,
+    53
+  ],
+  "device": "cpu",
+  "common_output_dimension": 160,
+  "pca_src": {
+    "dimension": 160,
+    "alpha": "inner three-fold selected"
+  },
+  "deep_lse_src": {
+    "input": "outer-training Pearson top 347",
+    "dimension": 160,
+    "alpha": "inner holdout selected",
+    "classification_weight": 1.0
+  },
+  "ae_src": {
+    "input": "outer-training Pearson top 347",
+    "dimension": 160,
+    "alpha": "inner holdout selected",
+    "classification_weight": 0.0
+  },
+  "cksaap_kpca": {
+    "features": 3600,
+    "dimension": 160,
+    "degree": 2,
+    "mp_atoms": 10,
+    "l1_alpha": 0.001
+  },
+  "awmkpca": {
+    "dimension": 160,
+    "l1_alpha": 0.001,
+    "weights": "outer-training centered kernel alignment"
+  },
+  "test_fold_used_for_training_or_selection": false
+}

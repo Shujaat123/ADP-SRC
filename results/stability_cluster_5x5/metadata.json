@@ -1,0 +1,13 @@
+{
+  "protocol": "cluster",
+  "splitter": "Repeated StratifiedGroupKFold with CD-HIT50 groups",
+  "folds": 5,
+  "seeds": [
+    6,
+    17,
+    29,
+    41,
+    53
+  ],
+  "interpretation": "Repeated CV is a stability analysis. Repeats share observations and are not independent population experiments."
+}

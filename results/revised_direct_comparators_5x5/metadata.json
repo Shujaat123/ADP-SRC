@@ -1,0 +1,15 @@
+{
+  "protocol": "Repeated StratifiedKFold",
+  "outer_folds": 5,
+  "inner_folds_for_src_alpha": 3,
+  "seeds": [
+    6,
+    17,
+    29,
+    41,
+    53
+  ],
+  "feature_dimension": 520,
+  "anti_dmppred_values": "same-fold reimplementation only",
+  "test_fold_used_for_training_or_selection": false
+}
